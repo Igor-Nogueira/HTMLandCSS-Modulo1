@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trabalhando com links</title>
+  </head>
+  <body>
+    <h1>Usando links externos</h1>
+    <p>
+      Você pode acessar o meu repositório público no
+      <a
+        href="https://github.com/Igor-Nogueira?tab=repositories"
+        target="_blank"
+        rel="external"
+        hreflang="pt-br"
+        >GitHub</a
+      >
+    </p>
+
+    <p>
+      Testando o parametro <q>_top</q>
+      <a href="https://github.com/Igor-Nogueira?tab=repositories" target="_top"
+        >GitHub</a
+      >
+    </p>
+
+    <p>
+      Testando o parametro <q>_parent</q>
+      <a href="https://github.com/Igor-Nogueira?tab=repositories">GitHub</a>
+    </p>
+
+    <h2>Natureza do Link</h2>
+    <p>
+      O atributo <q>rel</q> mesmo que não cause nenhuma mudança no site, informa
+      ao navegador a origem do link.
+    </p>
+    <ul>
+      <li>
+        <strong>next</strong>: indica que o link é para a próxima parte do
+        documento atual
+      </li>
+      <li>
+        <strong>prev</strong>: indica que o link é para a parte anterior do
+        documento atual
+      </li>
+      <li>
+        <strong>author</strong>: indica que é um link para o site do autor do
+        artigo atual
+      </li>
+      <li>
+        <strong>external</strong>: indica que é um link para outro site que não
+        faz parte do site atual
+      </li>
+      <li>
+        <strong>nofollow</strong>: indica que é um link para um site não
+        endossado, como um link pago
+      </li>
+    </ul>
+
+    <h2>Usando Links internos</h2>
+    <p>
+      Esta é a minha primeira página do site. Se você quiser, pode acessar
+      também a minha <a href="pag002.html" rel="next">Segunda página</a>
+    </p>
+    <p>
+      Você também pode acessar a nossa página de notícias
+      <a href="noticias/pag003.html" rel="next">clicando aqui</a>
+    </p>
+
+    <h1>Links para download</h1>
+    <ul>
+      <li>
+        <a
+          href="livro/10 - Ligações em toda parte.pdf"
+          download="10 - Ligações em toda parte.pdf"
+          type="application/pdf"
+          >Baixar o livro em PDF</a
+        >
+      </li>
+      <li>
+        <a
+          href="livro/10 - Ligações em toda parte.zip"
+          download="10- Ligações em toda parte.zip"
+          type="application/zip"
+          >Baixar o livro em ZIP</a
+        >
+      </li>
+    </ul>
+  </body>
+</html>
+
+<!-- Todo hyperlink é construindo através de uma âncora no código HTML. -->
+<!-- Links externos, são links que apontam para outro site, que não é o seu. -->
+<!-- Para que o link externo seja aberto em uma nova aba, sem sobrescrever a sua, basta usar o parâmetro 'target' e passar o valor '_blank' -->
+<!-- _self: Abre o link na janela ou frame atual(padrão) -->
+<!-- _top: Desfaz todos os frames e abre o destino no navegador completo. -->
+<!-- _parent: similar ao uso do _top em uma referência à janela mãe -->
+<!-- hreflang: permite indicar qual é o idioma principal do site para onde o link está desviando o fluxo de navegação. Vai permitir avisar ao navegador e a softwares de tradução como lidar caso o visitante opte por traduzir automaticamente os conteúdos -->
+<!-- Links internos, vai fazer a relação com outra página que está dentro do nosso servidor. -->
+<!-- Quando o link é interno, você não precisa informar a URL inteira. -->
+<!-- Ao colocar a "#" como valor para o href, sinaliza que o link está vazio. -->
+<!-- Parâmetro: "download", passamos o nome do arquivo e o tipo do arquivo que será realizado o download. -->
+<!-- Parâmetro "type": indica ao navegador que tipo de arquivo está sendo baixado. Pdemos encontrar os tipos no site "https://www.iana.org/assignments/media-types/media-types.xhtml" -->

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mídias em HTML 5</title>
+  </head>
+  <body>
+    <h1>Imagens dinâmicas</h1>
+    <p>
+      Tente abrir esse site em vários dispositivos diferentes ou simplesmente
+      aumente e diminua o tamanho do seu navegador.
+    </p>
+
+    <picture>
+      <source
+        media="(max-width: 750px)"
+        srcset="img/foto-p.png"
+        type="image/png"
+      />
+      <source
+        media="(max-width: 1050px)"
+        srcset="img/foto-m.png"
+        type="image/png"
+      />
+      <img src="img/foto-g.png" alt="Imagem flexível" />
+    </picture>
+
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML</p>
+    <audio>
+
+    </audio>
+  </body>
+</html>
+
+<!-- --------------------------------Imagens Dinâmicas---------------------------------- -->
+<!-- A tag picture tem um img dentro, porém ela permite que você crie vários source onde podemos informar novas imagens que se adaptem ao tipo de tela que o usuário esteja utilizando(celular, tablet, notebook, desktop). -->
+<!-- Por padrão, ao utilizar a tag source:media:type, o parâmetro media vem com o valor "min-width"(LARGURA MÍNIMA), uma alternativa seria trocar por "max-width"(LARGURA MÁXIMA). -->
+<!-- Ao passar o  valor com "Max-width", você está informando que a imagem irá aparecer até alcançar aquela largura, se ultrapassar e tiver outra, ela será substituída. -->
+<!-- É EXTREMAMENTE IMPORTANTE que os SOURCE estejam na ordem correta, nesse caso usando o "Max-WIdth" que seja a maior imagem na tag img(ela fica por último) e depois sendo acrescentado acima a tag source com os tamanhos menores. -->
+<!-- Bounce rate: Taxa de rejeição, uma medida que vai dar valor, ou, desvalorizar o seu site. Altos bounces rates para o Google é algo ruim, fazendo com que ele pare de indicar o seu site.-->
+<!-- Caso possua um canal no Youtube, você consegue efeitos sonoros e músicas de maneira simples. Acesse seu painel de controle no Youtube > Youtube Studio > Biblioteca de áudio. -->
+
+<!-- ------------------------------------ÁUDIOS----------------------------------------- -->
+<!-- São músicas 100% gratuitas sempre, porém algumas exigem atribuição necessária e outras não exigem a atribuição. -->
+<!-- Caso coloque alguma música com atribuição necessária, além de colocar o áudio, você precisa colocar a descrição que aparece ao selecionar o áudio. -->
+<!-- Ao usar a tag audio, o parâmetro src já vem por padrão, onde possibilita informarmos a pasta onde se econtra o áudio, porém alguns navegadores não suportam alguns tipos de áudio, por isso é sempre bom informar vários src dentro da tag áudio, pois dá a possibilidade de ter um tipo de áudio suportado pelo navegador. -->
