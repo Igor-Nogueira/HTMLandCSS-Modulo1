@@ -28,8 +28,16 @@
 
     <h1>Reproduzindo Áudio</h1>
     <p>Vamos aprender a reproduzir áudios em HTML</p>
-    <audio>
-
+    <audio preload="metadata" controls loop>
+      <source src="midias/guanacast-33.mp3" type="audio/mpeg" />
+      <source src="midias/guanacast-33.ogg" type="audio/ogg" />
+      <source src="midias/guanacast-33.wav" type="audio/wav" />
+      <p>
+        Infelizmente seu navegador não consegue reproduzir áudio.
+        <a href="midias/guanacast-33.mp3"
+          >Clique aqui para baixar o arquivo MP3</a
+        >
+      </p>
     </audio>
   </body>
 </html>
@@ -40,9 +48,11 @@
 <!-- Ao passar o  valor com "Max-width", você está informando que a imagem irá aparecer até alcançar aquela largura, se ultrapassar e tiver outra, ela será substituída. -->
 <!-- É EXTREMAMENTE IMPORTANTE que os SOURCE estejam na ordem correta, nesse caso usando o "Max-WIdth" que seja a maior imagem na tag img(ela fica por último) e depois sendo acrescentado acima a tag source com os tamanhos menores. -->
 <!-- Bounce rate: Taxa de rejeição, uma medida que vai dar valor, ou, desvalorizar o seu site. Altos bounces rates para o Google é algo ruim, fazendo com que ele pare de indicar o seu site.-->
-<!-- Caso possua um canal no Youtube, você consegue efeitos sonoros e músicas de maneira simples. Acesse seu painel de controle no Youtube > Youtube Studio > Biblioteca de áudio. -->
 
 <!-- ------------------------------------ÁUDIOS----------------------------------------- -->
+<!-- Caso possua um canal no Youtube, você consegue efeitos sonoros e músicas de maneira simples. Acesse seu painel de controle no Youtube > Youtube Studio > Biblioteca de áudio. -->
 <!-- São músicas 100% gratuitas sempre, porém algumas exigem atribuição necessária e outras não exigem a atribuição. -->
 <!-- Caso coloque alguma música com atribuição necessária, além de colocar o áudio, você precisa colocar a descrição que aparece ao selecionar o áudio. -->
-<!-- Ao usar a tag audio, o parâmetro src já vem por padrão, onde possibilita informarmos a pasta onde se econtra o áudio, porém alguns navegadores não suportam alguns tipos de áudio, por isso é sempre bom informar vários src dentro da tag áudio, pois dá a possibilidade de ter um tipo de áudio suportado pelo navegador. -->
+<!-- Ao usar a tag audio, o parâmetro "source:src" já vem por padrão, onde possibilita informarmos a pasta onde se econtra o áudio, porém alguns navegadores não suportam alguns tipos de áudio, por isso é sempre bom informar vários "source:src" dentro da tag áudio, pois dá a possibilidade de ter um tipo de áudio suportado pelo navegador. -->
+<!-- A ordem nesse caso também é muito importante o primeiro "source:src" que informarmos será o primeiro que tentará ser carregado pelo navegador, e assim por diante, tentando carregar os outros. Caso não consiga, foi deixado uma mensagem para que o usuário baixe o áudio. -->
+<!-- Mesmo que o arquivo WAV seja compatível com alguns navegadores, tente evitá-lo ao máximo, pois são arquivos extremamente grandes e pesados. -->
