@@ -56,3 +56,17 @@
 <!-- Ao usar a tag audio, o parâmetro "source:src" já vem por padrão, onde possibilita informarmos a pasta onde se econtra o áudio, porém alguns navegadores não suportam alguns tipos de áudio, por isso é sempre bom informar vários "source:src" dentro da tag áudio, pois dá a possibilidade de ter um tipo de áudio suportado pelo navegador. -->
 <!-- A ordem nesse caso também é muito importante o primeiro "source:src" que informarmos será o primeiro que tentará ser carregado pelo navegador, e assim por diante, tentando carregar os outros. Caso não consiga, foi deixado uma mensagem para que o usuário baixe o áudio. -->
 <!-- Mesmo que o arquivo WAV seja compatível com alguns navegadores, tente evitá-lo ao máximo, pois são arquivos extremamente grandes e pesados. -->
+<!-- O atributo preload indica se o áudio será pré-carregado ou não e aceita três
+valores:
+          metadata vai carregar apenas as informações sobre o arquivo (tamanho,
+tempo, informações de direitos, etc) -- O mais recomendado.
+          none não vai carregar absolutamente nada até que o usuário clique no botão
+play ou um script inicie a reprodução.
+          auto (padrão) vai carregar o arquivo de áudio inteiro assim que a página for
+carregada, mesmo que o usuário nunca aperte o play. -- Não recomendado-->
+<!-- O atributo controls vai apresentar o player na tela. Caso não seja colocado na tag
+<audio>, o controle será transparente e o usuário não poderá interagir com ele. -->
+<!-- O atributo autoplay, quando inserido, vai iniciar a reprodução do áudio assim que
+a página for carregada -->
+<!-- O atributo loop vai fazer com que o áudio seja repetido eternamente assim que
+terminar a sua reprodução. -->
